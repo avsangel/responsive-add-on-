@@ -10,6 +10,7 @@
       }
       p {
         text-align: center;
+        margin-bottom: 30px;
       }
       .box {
         background-color: darkcyan;
@@ -45,6 +46,60 @@
       }
       .container {
         overflow-x: auto;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
+        height: 240px;
+        border-spacing: 0;
+      }
+      img {
+        filter: blur(5px);
+        filter: sepia(50%);
+      }
+      .hero {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+          ),
+          url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/107/107/original/the-shire-andrew-read.jpeg?1702514775");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        color: aqua;
+        padding: 60px, 0;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      h3 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      button {
+        background-color: aliceblue;
+        text-align: center;
+        border-radius: 10px;
+        padding: 5px 10px;
+        border: none;
+      }
+      @media (max-width: 900px) {
+        .hero p {
+          display: none;
+        }
+        .hero h2 {
+          font-size: 15px;
+        }
+      }
+      .video {
+        width: 100%;
+        aspect-ratio: 16/9;
+      }
+      .vidhold {
+        max-width: 1200px;
+        margin: 0 auto;
       }
     </style>
   </head>
@@ -92,5 +147,35 @@
         </tbody>
       </table>
     </div>
+    <hr />
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/604/original/316533868_10107771227559663_6248944287189455535_n.jpeg?1697997036"
+      alt=""
+      width="200px"
+    />
+    brightness filter less than 100% will make the img darker
+    <hr />
+    <div class="hero">
+      <h1>css hero</h1>
+      <h3>scotland</h3>
+      <h2>the shire</h2>
+      <p>lets go on an adventure</p>
+      <button>learn more</button>
+    </div>
+    <hr />
+    <h1>html embeds</h1>
+    aspect-ratio 1/1 is always going to be a square. aspect-ratio: 21/9 and 16/9
+    is used most often for videos
+    <div class="vidhold">
+      <iframe
+        class="video"
+        src="https://www.youtube.com/embed/yDsOC_fLvGw?si=0I7jk56FHOv_Tc3_"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <hr />
   </body>
 </html>
